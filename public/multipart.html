@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>form data 纯文本</h3>
+    <form
+      action="http://localhost:3001/multi_text"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input name="username" />
+      <button type="submit">提交</button>
+    </form>
+
+    <h3>form data单个文件</h3>
+    <form
+      action="http://localhost:3001/multi_file"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input type="file" name="myFile" />
+      <button type="submit">提交</button>
+    </form>
+
+    <h3>form data 复杂场景</h3>
+    <form
+      action="http://localhost:3001/multi_fields"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input name="username" />
+      <input type="file" name="myFiles" />
+      <input type="file" name="myFiles" />
+      <button type="submit">提交</button>
+    </form>
+  </body>
+</html>
